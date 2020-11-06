@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#This scrip will completely remove the the macOS Privileges application form the users computer.
+
+rm -rf /Applications/Priveleges.app 
+rm -rf /Library/PrivilegedHelperTools/corp.sap.privileges.helper
+rm -rf /Library/LaunchDaemons/corp.sap.privileges.helper.plist
