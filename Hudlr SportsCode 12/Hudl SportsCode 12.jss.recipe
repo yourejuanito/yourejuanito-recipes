@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Hudl SportsCode and then uploads to the JSS</string>
 	<key>Identifier</key>
-	<string>com.github.yourejuanito.jss.SportsCode</string>
+	<string>com.github.yourejuanito-recipes.jss.Hudl SportsCode 12</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -21,14 +21,14 @@
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplate.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>The new Hudl Sportscode is more powerful and more intuitive with better scripting, faster interactions and easier integrations with your custom workflow.</string>
+		<string>The new Hudl Sportscode 12 is more powerful and more intuitive with better scripting, faster interactions and easier integrations with your custom workflow.</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>HudlSportsCode.png</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.4</string>
 	<key>ParentRecipe</key>
-	<string>com.github.haircut.pkg.SportsCode</string>
+	<string>com.github.yourejuanito-recipes.pkg.Hudl SportsCode 12</string>
 	<key>Process</key>
 	<array>
 		<dict>
