@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Writing app install path to preference file..."
+defaults write us.zoom.ringcentral installPath "/Applications/RingCentral Meetings.app"
+
+echo "Removing RingCentral Meetings plugin from existing user folders..."
+function removePluginsInUserFolder
+{
+    # Loop through all users with UIDs over 500
+    for name in $(/usr/bin/dscl /Local/Default list /Users UniqueID | /usr/bin/awk '$2 > 500 {print $1}'); do
+        # Determine home directory of user
+        userHome="$(/usr/bin/dscl /Local/Default read /Users/$name NFSHomeDirectory | /usr/bin/awk '{print $2}')"
+
+        if [[ -d "$userHome/Library/Application Support/RingCentral Meetings/Plugins" ]] ; then
+            /bin/rm -rf "$userHome/Library/Application Support/RingCentral Meetings/Plugins"
+        fi
+    done
+}
+removePluginsInUserFolder
